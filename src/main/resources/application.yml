@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: BookStore
+
+  h2:
+    console:
+      enabled: 'true'
+      path: /h2
+
+  r2dbc:
+    url: r2dbc:h2:mem:///bookStoreDB
+    driver: h2
+    username: sa
+    password: ''
+
+
+server:
+  port: 8081
+
+springdoc:
+  api-docs:
+    path: /api-docs
+    enabled: 'true'
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+
+promocodes:
+  promos:
+    - promocode: OFFERFIC10
+      bookType: TECHNOLOGY
+      discount: 10
+      expiredate: 25/08/2021
+
+    - promocode: OFFERFIC20
+      bookType: TECHNOLOGY
+      discount: 20
+      expiredate: 20/08/2021
+
+    - promocode: OFFERFIC10
+      bookType: SCIENCE
+      discount: 0
+      expiredate: 12/09/2021
+
+
+
